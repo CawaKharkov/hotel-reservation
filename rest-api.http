@@ -1,0 +1,33 @@
+POST http://localhost:3000/api/v1/user
+Content-Type: application/json
+Accept: application/json
+
+{
+  "firstName": "{{$random.alphabetic(5)}}",
+  "lastName": "{{$random.alphabetic(5)}}",
+  "password": "{{$random.alphanumeric(8)}}",
+  "email": "{{$random.email}}"
+}
+
+<> 2023-07-24T150451.200.json
+###
+
+DELETE http://localhost:3000/api/v1/user/64be1945ca8245c6ebaa55a7
+Content-Type: application/json
+Accept: application/json
+
+{
+}
+
+###
+
+PUT http://localhost:3000/api/v1/user/64be68e3ca8245c6ebaa55a6
+Content-Type: application/json
+Accept: application/json
+
+{
+  "firstName": "{{$random.alphabetic(5)}}",
+  "lastName": "{{$random.alphabetic(5)}}"
+}
+
+###
